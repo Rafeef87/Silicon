@@ -27,6 +27,13 @@ body{
     font-style: normal;
     font-size: 16px;
 }
+/*For mobile*/
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
 /*Container For mobile*/
 .container {
     width: 100%;
@@ -158,6 +165,24 @@ header .container {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
+/*Footer For mobile*/
+footer {
+    font-size: 14px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--color-gray);
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .credit {
+        display: none;
+    }
+}
+
+
 /*Tablet pages*/
 @media (min-width: 768px) {
     .container {
@@ -169,6 +194,11 @@ header .container {
         header .container {
             gap: 2rem;
         }
+        footer {
+            .credit {
+                display: block;
+            }
+        }
 }
 /*Desktop pages*/
 @media (min-width: 1400px) {
@@ -177,7 +207,7 @@ header .container {
     }
         header .container {
             grid-template-columns: auto 1fr auto auto;
-            gap: 2rem;
+            gap: 3rem;
         }
         .navbar {
             display: block;
