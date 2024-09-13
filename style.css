@@ -5,6 +5,7 @@
     --color-primary: #6366F1;
     --color-gray: #9397AD;
     --color-white: #FFFFFF;
+    --color-border-gray: #E2E5F1;
 
     --container-padding: 1rem;
     --transition-time: all 0.25;
@@ -182,6 +183,29 @@ footer {
     }
 }
 
+/*Brands For mobile*/
+#brands {
+    display: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+.brand-box {
+    border: 1px solid var(--color-border-gray);
+    border-radius: 8px;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /*Tablet pages*/
 @media (min-width: 768px) {
@@ -199,7 +223,20 @@ footer {
                 display: block;
             }
         }
+        #brands {
+            display: block;
+            .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        #brand-5, #brand-6 {
+            display: none;
+        }
 }
+
+
 /*Desktop pages*/
 @media (min-width: 1400px) {
     .container {
@@ -218,5 +255,7 @@ footer {
         .btn-mobile {
             display: none;
         }
-        
+        #brand-5, #brand-6 {
+            display: flex;
+        }
 }
