@@ -602,23 +602,193 @@ header .container {
     
 }
 
+#featuer {
+    .container {
+        .contant {
+            display: none;
+        }
+        .contant-1 {
+            display: none;
+        }
+        .images {
+            display: none;
+        }
+        .image {
+            display: none;
+        }
+        .details {
+            display: none;
+        }
+    }
+     @media (min-width: 1400px) {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        .container {
+            .contant {
+                display: block;
+            }
+            .contant-1 {
+                display: block;
+            }
+            .images {
+                display: block;
+            }
+            .image {
+                display: block;
+            }
+            .money {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                gap: 1rem;
+            }
+            .btn-cheked {
+                color: var(--color-primary);
+                padding: .5rem;
+            }
+            .btn {
+                padding: .5rem;
+            }
+            .images {
+                display: block;
+                position: relative;
+                grid-area: images;
+                bottom: -100;
+                width: auto;
+                .back {
+                    position: absolute;
+                    height: auto;
+                  }  
+                .front {
+                    position: absolute;
+                    height: auto;
+                    padding-left: 200px;
+                    padding-top: 50%;
+                }    
+            }
+            
+            .contant {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "money images";
+                justify-content: space-evenly;
+                align-items: start;
+                padding: 1rem;
+                margin: 1rem;
+                gap: 1rem;
+                height: 500px;
+                
+            }
+            .image {
+                display: block;
+                position: relative;
+                grid-area: images;
+                bottom: -100;
+                width: auto;
+                .back {
+                    position: absolute;
+                    height: auto;
+                  }  
+                .front {
+                    position: absolute;
+                    height: auto;
+                    padding-left: 130px;
+                    padding-top: 120px;
+                }    
+            }
+            .content-1 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "images details";
+                justify-content: space-evenly;
+                align-items: start;
+                gap: 1rem;
+                padding: 1rem;
+                margin: 1rem;
+                height: 500px;
+            }
+            
+            .details {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 400px;
+            }
+            .box-learn-more {
+                display: grid;
+                grid-template-columns: 1rf;
+                grid-template-areas: "learn-more learn-more1";
+                justify-content: space-between;
+                align-items: start;
+                gap: 1rem;
+                height: 100%;
+                
+            }
+            .learn-more {
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    padding: 1rem;
+                    gap: 2rem;
+                    width: 250px;
+            }
+
+            .learn-more1 {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                padding: 1rem;
+                gap: 1rem;
+                width: 250px;
+            }
+        }
+    }
+}
 /*Testimonials section*/
 #testimonials {
-    margin: 2rem;
-    padding: 2rem;
+
     .container {
-        display: grid;
-        grid-template-columns: 2fr 3fr 3fr;
-        grid-template-areas: "headline" "girl-rating" "boy-rating";
-        justify-content: space-between;
-        align-items: start;
-        margin: 2rem;
-        padding: 2rem;
-        gap: 2rem;
-        .headline {
-        color: var(--color-dark);
-        font-size: 40px;
+       .headline {
+        display: none;
+       }
+       .girl-rating {
+        display: none;
+       }
+       .boy-rating {
+        display: none;
+       }
+    }
+    @media (min-width: 1400px) {
+
+        .container {
+            .headline {
+                display: block;
+               }
+               .girl-rating {
+                display: block;
+               }
+               .boy-rating {
+                display: block;
+               }
         }
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 3fr 3fr;
+            grid-template-areas: "headline" "girl-rating" "boy-rating";
+            justify-content: space-between;
+            align-items: start;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            gap: 2rem;
+       
+            .headline {
+            color: var(--color-dark);
+            font-size: 40px;
+            }
         .girl {
             position: relative;
             .text {
@@ -645,7 +815,9 @@ header .container {
                 width: 300px;
             }
         }
+        
     } 
+    }
     .girl-rating {
         display: flex;
         flex-direction: column;
@@ -687,19 +859,9 @@ header .container {
         padding: 1rem;
         width: 300px;
     }
-        
-    @media (min-width = 768px)  {
-        .container {
-            display: none;
-        }
-    }   
-  
-    @media (min-width = 1400) {
-        .desktop {
-            display: block;
-        }
-    }
 }
+
+
 /*Questions section*/
 #fqas {
     padding-top: 1rem;
@@ -888,13 +1050,20 @@ header .container {
             .container {
                 display: grid;
                 grid-template-columns: 1fr 2fr;
-                grid-template-areas: "content que-wrapper"
-                                    "contact que-wrapper";
-                height: 600px;
+                grid-template-areas: "content contact"
+                                    "que-wrapper que-wrapper";
+                height: 700px;
+                
+            
             }
+
+
+            
             .content {
             margin-bottom: 2rem;
+            
             }
+
     }
 
 }
