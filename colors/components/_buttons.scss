@@ -1,0 +1,144 @@
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 12px 25px;
+    margin-right: 0.5rem;
+    transition: 0.25s;
+    text-decoration: none !important;
+    &:hover {
+        background-color: var(--color-gray);
+        color: var(--color-white);
+        transition: 0.25s;
+    }
+     i {
+        margin-right: 0.5rem;
+    }
+}
+.btn-download-app {
+    background-color: var(--color-gray900);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-gray100);
+        text-decoration: none;
+    }
+}
+
+.btn-toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+ }
+ .btn-toggle-switch .label {
+        display: none;
+}
+.toggle-switch{
+    position: relative;
+    display:  inline-block;
+    width: 45px;
+    height: 25px;
+    input{
+        opacity:0;
+    
+     
+        &:checked {
+            + .slider {
+            background-color:var(--color-primary);
+        
+    
+                &::before {
+                    transform:translateX(18px);
+                    background-color:var(--color-white);
+                }
+            }
+        }
+        &:focus {
+            +.slider {
+                box-shadow: 0 0 1px var(--color-primary);
+            }
+        } 
+    }
+}
+.slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-gray);
+        transition: all 0.2s;
+     
+        &::before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 2.5px;
+            background-color: var(--color-white);
+            transition: all 0.2s;
+        }   
+        &.round {
+            border-radius: 35px;
+            &::before {
+                border-radius: 50%;
+            }
+        }
+}
+
+.discover-more {
+    color: var(--color-gray900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-size: small;
+    @media (min-width: 768px) {
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+        font-size: medium;
+
+    }
+    @media (min-width: 1400px) {
+        margin-top: 10rem;
+        font-size: 40px;
+    }
+}
+.btn-mobile {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    
+}
+.btn-subscribe {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-start-end-radius: 5px;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
+ 
+    &:hover {
+        background-color: var(--color-gray);
+        color: var(--color-white);
+        text-decoration: underline;
+    }
+    &:active {
+        text-decoration: underline; 
+    }
+}

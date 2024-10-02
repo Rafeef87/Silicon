@@ -1,0 +1,29 @@
+body {
+    color: var(--color-gray900);
+}
+text {
+    color: var(--color-gray700);
+}
+span {
+    color: var(--color-gray900)
+}
+
+@mixin text {
+    font-family: "manrop", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+@mixin body{
+    font-family: "manrop", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+@mixin heading {
+    font-family: "manrop", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}

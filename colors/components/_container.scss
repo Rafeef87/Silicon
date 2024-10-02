@@ -1,0 +1,234 @@
+.container {
+    position: relative;
+    width: 100%;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    .container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr auto auto;
+        grid-template-areas: "logo sw mobile";
+        gap: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        .btn-toggle-switch .label{
+            display: none;
+        }
+        .navbar {
+            display: none;
+        }
+    
+
+        @media (min-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
+        .btn-toggle-switch .label{
+            display: block;
+            }
+            header .container {
+                gap: 2rem;
+            }
+
+    }
+    
+    @media (min-width: 1400px) {
+        .container{
+            max-width:1320px;
+        }
+            grid-template-columns: auto 1fr auto auto;
+            gap: 3rem;
+            .label {
+                display: block;
+                color: var(--color-gray800);
+            }
+            .navbar {
+                display: block;
+                color: var(--color-gray800);
+            }
+            #auth-signin {
+                display: block;
+            }
+            .btn-mobile {
+                display: none;
+            }
+        }
+    
+    }
+}
+
+#brands {
+    display: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    @media (min-width: 768px){
+        display: block;     
+    }
+   
+    @media (min-width: 768px) {
+            
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            
+            #brand-5, #brand-6 {
+                display: none;
+            }
+    }
+    @media(min-width: 1400px){
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    #brand-5, #brand-6 {
+        display: flex;
+    }
+    }
+}
+#featuer {
+     @media (min-width: 1400px) {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        .container {
+            .contant {
+                display: block;
+            }
+            .contant-1 {
+                display: block;
+            }
+            .images {
+                display: block;
+            }
+            .image {
+                display: block;
+            }
+            .money {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                gap: 1rem;
+            }
+            .text {
+                span {
+                    color: var(--color-gray700);
+                }
+                margin-bottom: 1rem;
+            }
+            .btn-cheked {
+                color: var(--color-primary);
+                padding: .5rem;
+            }
+            .btn {
+                padding: .5rem;
+            }
+            .images {
+                display: block;
+                position: relative;
+                grid-area: images;
+                bottom: -100;
+                width: auto;
+                .back {
+                    position: absolute;
+                    height: auto;
+                }  
+                .front {
+                    position: absolute;
+                    height: auto;
+                    padding-left: 200px;
+                    padding-top: 50%;
+                }    
+            }
+            
+            .contant {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "money images";
+                justify-content: space-evenly;
+                align-items: start;
+                padding: 1rem;
+                margin: 1rem;
+                gap: 1rem;
+                height: 500px;
+                
+            }
+            .image {
+                display: block;
+                position: relative;
+                grid-area: images;
+                bottom: -100;
+                width: auto;
+                .back {
+                    position: absolute;
+                    height: auto;
+                  }  
+                .front {
+                    position: absolute;
+                    height: auto;
+                    padding-left: 130px;
+                    padding-top: 120px;
+                }    
+            }
+            .content-1 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "images details";
+                justify-content: space-evenly;
+                align-items: start;
+                gap: 1rem;
+                padding: 1rem;
+                margin: 1rem;
+                height: 500px;
+            }
+            
+            .details {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                gap: 1rem;
+                width: 500px;
+                .headline {
+                    padding: 1rem;
+                    width: 400px;
+                }
+            }
+            .box-learn-more {
+                display: grid;
+                grid-template-columns: 1rf;
+                grid-template-areas: "learn-more learn-more1";
+                justify-content: space-between;
+                align-items: start;
+                gap: 1rem;
+                height: 100%;
+                
+            }
+            .learn-more {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                padding: 1rem;
+                gap: 2rem;
+                width: 250px;
+            }
+
+            .learn-more1 {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                padding: 1rem;
+                gap: 1rem;
+                width: 250px;
+            }
+        }
+    }
+}
