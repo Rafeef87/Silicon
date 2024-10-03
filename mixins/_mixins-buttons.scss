@@ -1,0 +1,78 @@
+
+@mixin btn-primary {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 12px 25px;
+    margin-right: 0.5rem;
+    transition: 0.25s;
+    text-decoration: none !important;
+    &:hover {
+        transition: 0.25s;
+        text-decoration: none;
+    }
+    i {
+        margin-right: 0.5rem;
+    }
+}
+.btn-download-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    &:hover {
+        
+        text-decoration: none;
+    }    
+}
+
+
+@mixin btn-circle {
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-border-gray700);
+    text-decoration: none !important;
+}
+.btn-mobile {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    i {
+        margin-right: 0.5rem;
+    }
+}
+
+.btn-toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &.label {
+        display: none;
+    }
+ }
+.toggle-switch {
+    position: relative;
+    display:  inline-block;
+    width: 45px;
+    height: 25px;
+    
+}
+#auth-signin {
+    display: none;
+    
+    @media (min-width: 1400px) {
+        
+        display: block;
+        .btn-mobile {
+            display: none;
+        }
+    }
+}
+
+
